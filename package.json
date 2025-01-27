@@ -1,0 +1,38 @@
+{
+  "name": "crisp-linear-customer-request",
+  "version": "0.0.0",
+  "description": "Crisp-Linear integration for creating customer requests",
+  "author": "Gil Gardosh",
+  "license": "MIT",
+  "keywords": [
+    "crisp",
+    "linear"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilgardosh/crisp-linear-customer-request.git"
+  },
+  "homepage": "https://github.com/gilgardosh/crisp-linear-customer-request#readme",
+  "bugs": {
+    "url": "https://github.com/gilgardosh/crisp-linear-customer-request/issues"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "dev": "yarn build --watch --onSuccess \"node dist/index.js\"",
+    "prebuild": "yarn typecheck",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "crisp-api": "^9.5.0",
+    "crisp-sdk-web": "^1.0.25",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsup": "8.3.6",
+    "typescript": "5.7.3"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
